@@ -11,9 +11,9 @@ class Orange(object):
 
     def _repr_png_(self):
         if self.peeled:
-            return open('orange_peeled.png', 'r').read()
+            return open('./orange_peeled.png', 'r').read()
         else:
-            return open('orange.png', 'r').read()
+            return open('./orange.png', 'r').read()
 
 class Apple(object):
     def __init__(self):
@@ -24,7 +24,7 @@ class Apple(object):
         return "Apple()"
 
     def _repr_jpeg_(self):
-        return open('apple.jpeg', 'r').read()
+        return open('./apple.jpeg', 'r').read()
 
 def weigh(obj):
     return obj._weight
