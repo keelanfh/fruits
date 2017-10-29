@@ -1,1 +1,1 @@
-import fruits
+from fruits import *
