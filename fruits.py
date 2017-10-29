@@ -1,3 +1,6 @@
+import os
+direc = os.path.dirname(__file__)
+
 class Orange(object):
     def __init__(self):
         self.peeled = False
@@ -11,9 +14,9 @@ class Orange(object):
 
     def _repr_png_(self):
         if self.peeled:
-            return open('./orange_peeled.png', 'r').read()
+            return open(os.path.join(direc,'orange_peeled.png'), 'r').read()
         else:
-            return open('./orange.png', 'r').read()
+            return open(os.path.join(direc,'orange.png'), 'r').read()
 
 class Apple(object):
     def __init__(self):
@@ -24,7 +27,7 @@ class Apple(object):
         return "Apple()"
 
     def _repr_jpeg_(self):
-        return open('./apple.jpeg', 'r').read()
+        return open(os.path.join(direc,'apple.jpeg'), 'r').read()
 
 def weigh(obj):
     return obj._weight
